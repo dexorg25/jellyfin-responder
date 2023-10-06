@@ -1,0 +1,12 @@
+[Unit]
+Description=Answer questions for jellyfin server discovery
+After=network.target
+
+[Service]
+Type=exec
+User=dex
+ExecStart=/home/dex/.cargo/bin/jellyfin-responder
+EnvironmentFile=/home/dex/repos/jellyfin-responder/.env
+
+[Install]
+WantedBy=multi-user.target
