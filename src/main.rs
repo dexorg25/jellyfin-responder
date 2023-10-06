@@ -18,7 +18,7 @@ extern crate dotenvy;
 #[allow(clippy::unwrap_used)]
 fn main() -> std::io::Result<()> {
     // try to load env file
-    let _ = dotenvy::dotenv();
+    let _unused = dotenvy::dotenv();
 
     let Args {
         server_address,
